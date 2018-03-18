@@ -65,6 +65,8 @@ ceph_create_keyring_admin:
     - pkg: common_packages
   {%- endif %}
     - file: common_config
+  - require_in:
+    - cmd: ceph_create_keyring_admin
 
 {%- endif %}
 
